@@ -1,0 +1,12 @@
+[Unit]
+Description=Auto updater for the FRUK-Simulator/Simulator robot simulator web app
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/www-data/
+User=www-data
+ExecStart=/bin/bash /home/www-data/update.sh
+Restart=on-failure
+RestartSec=10
+TimeoutSec=30
